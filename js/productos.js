@@ -47,9 +47,9 @@ window.CATALOGO = {
       slug: "lamparas-mesa",
       nombre: "Lámparas para mesa",
       categoria: "Iluminación",
-      resumen: "Lámparas decorativas inalámbricas de luz cálida.",
+      resumen: "Lámparas decorativas inalámbricas con base.",
       descripcion:
-        "Lámparas de mesa decorativas e inalámbricas, así que no necesitan contacto cerca: dan una luz cálida y suave a cada mesa durante la cena y se ven increíbles al atardecer.",
+        "Lámparas de mesa con pantalla acanalado y base dorada. Son lámparas inalámbricas que dan una luz cálida y crean una atmósfera cálida e intima en cada mesa",
       precio: 60,
       unidad: "por pieza",
       medidas: "Por definir",
