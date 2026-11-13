@@ -36,6 +36,7 @@
   });
   // Número de WhatsApp visible debajo de cada botón de cotizar
   const addPhone = () => N.telefono && $$("[data-cta]").forEach((el) => {
+    if (el.closest(".footer-cta")) return; // el bloque final ya abre WhatsApp, sin texto extra
     if (el.nextElementSibling && el.nextElementSibling.classList.contains("cta-phone")) return;
     el.insertAdjacentHTML("afterend", `<span class="cta-phone">WhatsApp <a href="https://wa.me/${esc(N.whatsapp)}" target="_blank" rel="noopener">${esc(N.telefono)}</a></span>`);
   });
@@ -83,7 +84,10 @@
   function initHome() {
     $$("[data-total]").forEach((el) => (el.textContent = P.length));
     $$("[data-total-text]").forEach((el) => (el.textContent = P.length));
-    $$("[data-cta]").forEach((el) => (el.href = ctaHref(`Hola, me interesa rentar piezas para mi evento.`)));
+    $$("[data-cta]").forEach((el) => {
+      el.href = ctaHref(`Hola, me interesa rentar piezas para mi evento.`);
+      if (N.whatsapp) { el.target = "_blank"; el.rel = "noopener"; } // abre WhatsApp en otra pestaña
+    });
 
     // Marquee
     const evs = C.eventos.map((e) => `<span>${esc(e)}</span>`).join("");
