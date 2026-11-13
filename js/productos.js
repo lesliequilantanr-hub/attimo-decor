@@ -47,9 +47,9 @@ window.CATALOGO = {
       slug: "lamparas-mesa",
       nombre: "Lámparas para mesa",
       categoria: "Iluminación",
-      resumen: "Lámparas de cristal acanalado con base dorada, inalámbricas.",
+      resumen: "Lámparas decorativas inalámbricas de luz cálida.",
       descripcion:
-        "Lámparas de mesa con pantalla de cristal acanalado y base metálica dorada. Son inalámbricas, así que no necesitan contacto cerca: dan una luz cálida y suave a cada mesa durante la cena y se ven increíbles al atardecer.",
+        "Lámparas de mesa decorativas e inalámbricas, así que no necesitan contacto cerca: dan una luz cálida y suave a cada mesa durante la cena y se ven increíbles al atardecer.",
       precio: 60,
       unidad: "por pieza",
       medidas: "Por definir",
