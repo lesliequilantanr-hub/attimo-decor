@@ -73,7 +73,7 @@ window.CATALOGO = {
         "Mesa redonda con base de pedestal en blanco. Ideal para la entrada: libro de firmas, fotos de la pareja, recuerdos o la mesa de regalos. Su forma limpia deja que la decoración sea la protagonista.",
       precio: 350,
       unidad: "por evento",
-      opciones: ["Con caja de sobres, 1 lámpara decorativa y marco de fotos: $450"],
+      opciones: ["Set de recepción: $450. Incluye mesa, caja para sobres, lámpara decorativa y marco para fotos."],
       medidas: "Por definir",
       material: "Por definir",
       cantidad: "1 pieza",
