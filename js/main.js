@@ -189,6 +189,11 @@
     $("[data-material-row]").hidden = p.material === "";
     set("material", pending(p.material));
     set("cantidad", pending(p.cantidad));
+    // Oculta los renglones vacíos o que digan "Por definir" (se muestran solos al poner el dato en productos.js)
+    ["medidas", "material", "cantidad"].forEach((k) => {
+      const dd = $(`[data-p="${k}"]`);
+      if (dd) dd.parentElement.hidden = !p[k] || /por definir/i.test(p[k]);
+    });
     set("eventos", esc(p.eventos.join(", ")));
     $("[data-incluye-row]").hidden = !p.incluye.length;
     $("[data-opciones-row]").hidden = !(p.opciones && p.opciones.length);
