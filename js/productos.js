@@ -51,7 +51,7 @@ window.CATALOGO = {
       descripcion:
         "Lámparas de mesa con pantalla de cristal acanalado y base metálica dorada. Son inalámbricas, así que no necesitan contacto cerca: dan una luz cálida y suave a cada mesa durante la cena y se ven increíbles al atardecer.",
       precio: 60,
-      unidad: "c/u",
+      unidad: "por pieza",
       medidas: "Por definir",
       material: "Cristal y metal dorado",
       cantidad: "Por definir",
@@ -89,7 +89,7 @@ window.CATALOGO = {
       descripcion:
         "Pedestales blancos de diferentes alturas para levantar arreglos florales; renta las piezas que necesites. Funcionan para el pasillo de una ceremonia civil, la entrada o para enmarcar un altar, creando niveles y profundidad.",
       precio: 250,
-      unidad: "por pza",
+      unidad: "por pieza",
       medidas: "Por definir",
       material: "Por definir",
       cantidad: "Por pieza (3 alturas disponibles)",
