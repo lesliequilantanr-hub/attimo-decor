@@ -29,11 +29,18 @@
   $$("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
   $$("[data-contacto]").forEach((el) => {
     const parts = [];
-    if (N.whatsapp) parts.push(`<a href="https://wa.me/${esc(N.whatsapp)}" target="_blank" rel="noopener">WhatsApp</a>`);
+    if (N.whatsapp) parts.push(`<a href="https://wa.me/${esc(N.whatsapp)}" target="_blank" rel="noopener">WhatsApp ${esc(N.telefono || "")}</a>`);
     if (N.instagram) parts.push(`<a href="https://instagram.com/${esc(N.instagram)}" target="_blank" rel="noopener">Instagram</a>`);
     if (N.correo) parts.push(`<a href="mailto:${esc(N.correo)}">${esc(N.correo)}</a>`);
     el.innerHTML = parts.length ? parts.join(" · ") : esc(N.ciudad);
   });
+  // Número de WhatsApp visible debajo de cada botón de cotizar
+  const addPhone = () => N.telefono && $$("[data-cta]").forEach((el) => {
+    if (el.nextElementSibling && el.nextElementSibling.classList.contains("cta-phone")) return;
+    el.insertAdjacentHTML("afterend", `<span class="cta-phone">WhatsApp <a href="https://wa.me/${esc(N.whatsapp)}" target="_blank" rel="noopener">${esc(N.telefono)}</a></span>`);
+  });
+  addPhone();
+  const noPhoto = `<div class="no-photo"><span>Fotos próximamente</span></div>`;
 
   // Menú pantalla completa
   const menu = $("#menu");
@@ -92,6 +99,17 @@
     // Tarjetas
     const works = $("[data-works]");
     works.innerHTML = P.map((p, i) => {
+      if (!p.imagenes.length) return `<li class="work reveal" data-cat="${esc(p.categoria)}">
+        <a href="${linkTo(p.slug)}">
+          <div class="work-media"><span class="tag">${esc(p.unidad)}</span>${noPhoto}</div>
+          <div class="work-meta">
+            <span class="work-num">${pad(i + 1)}</span>
+            <h3 class="work-title">${esc(p.nombre)} <span class="cat">— ${esc(p.categoria)}</span></h3>
+            <span class="work-price">${fmtPrecio(p.precio)}</span>
+            <span class="work-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
+      </li>`;
       const img2 = p.imagenes[1] ? `<img src="${p.imagenes[1]}" alt="" loading="lazy">` : "";
       return `<li class="work reveal" data-cat="${esc(p.categoria)}">
         <a href="${linkTo(p.slug)}" data-preview="${p.imagenes[0]}">
@@ -167,13 +185,19 @@
     set("cantidad", pending(p.cantidad));
     set("eventos", esc(p.eventos.join(", ")));
     $("[data-incluye-row]").hidden = !p.incluye.length;
+    $("[data-opciones-row]").hidden = !(p.opciones && p.opciones.length);
+    if (p.opciones && p.opciones.length) set("opciones", p.opciones.map(esc).join("<br>"));
     if (p.incluye.length) set("incluye", p.incluye.map(esc).join("<br>"));
     $$("[data-cta]").forEach((el) => (el.href = ctaHref(`Hola, me interesa rentar: ${p.nombre}. ¿Me pasas disponibilidad y precio?`)));
 
     // Galería
     const main = $("[data-gallery-main]");
     const thumbs = $("[data-gallery-thumbs]");
-    main.src = p.imagenes[0];
+    const gm = main.parentElement;
+    $$(".no-photo", gm).forEach((x) => x.remove());
+    main.hidden = !p.imagenes.length;
+    if (!p.imagenes.length) gm.insertAdjacentHTML("beforeend", noPhoto);
+    else main.src = p.imagenes[0];
     main.alt = p.nombre;
     thumbs.innerHTML = "";
     main.classList.remove("is-swapping");

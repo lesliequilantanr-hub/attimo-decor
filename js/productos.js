@@ -12,8 +12,9 @@ window.CATALOGO = {
   negocio: {
     nombre: "Attimo",
     lema: "Attimo Decor · Mobiliario y decoración para eventos",
-    whatsapp: "",                        // ← ej. "5218112345678" (con lada, sin +)
-    instagram: "attimo.decor",
+    whatsapp: "528119028864",            // con lada de país 52, sin +
+    telefono: "81 1902 8864",            // como se muestra en la página
+    instagram: "",                       // ← cuando exista: "attimo.decor"
     correo: "",
     ciudad: "Monterrey, N.L.",
     moneda: "MXN",
@@ -29,9 +30,9 @@ window.CATALOGO = {
       resumen: "Arco blanco de gran formato para recibir a tus invitados.",
       descripcion:
         "Estructura en forma de arco, en acabado blanco liso, pensada para marcar la entrada al evento o como fondo de fotos. Se puede vestir con cortina de gasa, follaje colgante y flores, y combina con iluminación cálida para la noche.",
-      precio: null,
+      precio: 5000,
       unidad: "por evento",
-      medidas: "Por definir",
+      medidas: "3 m de alto × 2.40 m de ancho",
       material: "Por definir",
       cantidad: "1 pieza",
       incluye: ["Montaje y desmontaje", "Cortina de gasa (opcional)"],
@@ -49,8 +50,8 @@ window.CATALOGO = {
       resumen: "Lámparas de cristal acanalado con base dorada, inalámbricas.",
       descripcion:
         "Lámparas de mesa con pantalla de cristal acanalado y base metálica dorada. Son inalámbricas, así que no necesitan contacto cerca: dan una luz cálida y suave a cada mesa durante la cena y se ven increíbles al atardecer.",
-      precio: null,
-      unidad: "por pieza",
+      precio: 60,
+      unidad: "c/u",
       medidas: "Por definir",
       material: "Cristal y metal dorado",
       cantidad: "Por definir",
@@ -100,13 +101,14 @@ window.CATALOGO = {
     },
     {
       slug: "bases-macetas",
-      nombre: "Bases + macetas",
+      nombre: "Jarrón con base",
       categoria: "Decoración floral",
-      resumen: "Pedestal blanco con jarrón para arreglos altos y abundantes.",
+      resumen: "Pedestal blanco con jarrón para arreglos altos. También se renta la maceta sola.",
       descripcion:
         "Pedestal blanco con jarrón incluido, listo para recibir un arreglo floral alto. Da presencia a la entrada, al lado de un arco o junto a la mesa de novios.",
-      precio: null,
-      unidad: "por juego",
+      precio: 500,
+      unidad: "jarrón con base",
+      opciones: ["Maceta sola: $350"],
       medidas: "Por definir",
       material: "Por definir",
       cantidad: "Por definir",
@@ -121,14 +123,33 @@ window.CATALOGO = {
       resumen: "Tarima blanca que eleva la mesa principal y la vuelve el centro.",
       descripcion:
         "Tarima en acabado blanco para levantar la mesa de novios o la mesa principal. Hace que todos los invitados los vean y combina perfecto con el arco como fondo.",
-      precio: null,
+      precio: 3000,
       unidad: "por evento",
-      medidas: "Por definir",
+      medidas: "3.60 × 3.60 m",
       material: "Por definir",
       cantidad: "1 pieza",
       incluye: ["Montaje y desmontaje"],
       eventos: ["Bodas", "XV años"],
       imagenes: ["assets/img/productos/tarima-novios/tarima-novios-01.jpg"],
+    },
+    {
+      slug: "back-entelado",
+      nombre: "Back entelado",
+      categoria: "Estructuras",
+      resumen: "Fondo forrado de tela, en el color que tú elijas.",
+      descripcion:
+        "Fondo de tela con caída y drapeados, ideal detrás de la mesa de novios, en la mesa de postres o como muro para fotos. Tú eliges el color de la tela para que combine con la decoración de tu evento.",
+      precio: 2000,
+      unidad: "por evento",
+      medidas: "Por definir",
+      material: "Estructura con tela drapeada",
+      cantidad: "1 pieza",
+      incluye: ["Tela en el color de tu preferencia"],
+      eventos: ["Bodas", "XV años", "Cumpleaños", "Baby shower", "Despedidas"],
+      imagenes: [
+        "assets/img/productos/back-entelado/back-entelado-01.jpg",
+        "assets/img/productos/back-entelado/back-entelado-02.jpg",
+      ],
     },
   ],
 };

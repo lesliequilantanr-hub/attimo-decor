@@ -292,6 +292,15 @@ body.is-ready .line > span { transform: none; }
 .product-nav span { font-size: clamp(22px, 3vw, 40px); letter-spacing: -.03em; line-height: 1.05; transition: color .3s; }
 .product-nav a:hover span { color: var(--accent); }
 
+/* ── Teléfono bajo los botones de cotizar / sin foto ─────────── */
+.cta-phone { display: block; margin-top: 12px; font-size: 14px; letter-spacing: .02em; color: var(--muted); }
+.cta-phone a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.footer-cta .cta-phone { font-family: var(--f-sans); font-size: clamp(16px, 1.6vw, 20px); letter-spacing: 0; margin-top: 20px; color: rgba(255,255,255,.6); }
+.footer-cta .cta-phone a { display: inline; font-family: var(--f-sans); font-style: normal; letter-spacing: 0; color: var(--bg); }
+.no-photo { position: absolute; inset: 0; display: grid; place-items: center; background: var(--card); }
+.gallery-main { position: relative; }
+.no-photo span { font-family: var(--f-serif); font-style: italic; font-size: 26px; color: var(--muted); }
+
 /* ── Aparición al hacer scroll ────────────────────────────────── */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
 .reveal.is-in { opacity: 1; transform: none; }
