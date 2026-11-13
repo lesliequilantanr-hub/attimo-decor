@@ -85,14 +85,14 @@ window.CATALOGO = {
       slug: "bases-florales",
       nombre: "Bases para decoración floral",
       categoria: "Decoración floral",
-      resumen: "Juego de 3 bases blancas en distintas alturas para arreglos.",
+      resumen: "Bases blancas en distintas alturas para arreglos. Se rentan por pieza.",
       descripcion:
-        "Set de tres pedestales blancos de diferentes alturas para levantar arreglos florales. Funcionan para el pasillo de una ceremonia civil, la entrada o para enmarcar un altar, creando niveles y profundidad.",
+        "Pedestales blancos de diferentes alturas para levantar arreglos florales; renta las piezas que necesites. Funcionan para el pasillo de una ceremonia civil, la entrada o para enmarcar un altar, creando niveles y profundidad.",
       precio: 250,
-      unidad: "c/u",
+      unidad: "por pza",
       medidas: "Por definir",
       material: "Por definir",
-      cantidad: "3 piezas",
+      cantidad: "Por pieza (3 alturas disponibles)",
       incluye: [],
       eventos: ["Bodas", "XV años", "Baby shower"],
       imagenes: [
