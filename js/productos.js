@@ -53,7 +53,7 @@ window.CATALOGO = {
       precio: 60,
       unidad: "por pieza",
       medidas: "Por definir",
-      material: "Cristal y metal dorado",
+      material: "",                 // vacío = no se muestra
       cantidad: "Sujeta a disponibilidad",
       incluye: ["Carga completa antes del evento"],
       eventos: ["Bodas", "Cumpleaños", "Despedidas", "XV años"],

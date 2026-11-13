@@ -185,6 +185,8 @@
     set("precio", fmtPrecio(p.precio));
     set("unidad", p.precio == null ? "Precio según fecha y cantidad" : esc(p.unidad));
     set("medidas", pending(p.medidas));
+    // material: "" (vacío) oculta el renglón en la ficha
+    $("[data-material-row]").hidden = p.material === "";
     set("material", pending(p.material));
     set("cantidad", pending(p.cantidad));
     set("eventos", esc(p.eventos.join(", ")));
