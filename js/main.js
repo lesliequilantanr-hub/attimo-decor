@@ -40,7 +40,7 @@
     if (el.nextElementSibling && el.nextElementSibling.classList.contains("cta-phone")) return;
     el.insertAdjacentHTML("afterend", `<span class="cta-phone">WhatsApp <a href="https://wa.me/${esc(N.whatsapp)}" target="_blank" rel="noopener">${esc(N.telefono)}</a></span>`);
   });
-  addPhone();
+  // addPhone(); // desactivado: los botones de cotizar ya abren WhatsApp
   const noPhoto = `<div class="no-photo"><span>Fotos próximamente</span></div>`;
 
   // Menú pantalla completa
@@ -192,7 +192,10 @@
     $("[data-opciones-row]").hidden = !(p.opciones && p.opciones.length);
     if (p.opciones && p.opciones.length) set("opciones", p.opciones.map(esc).join("<br>"));
     if (p.incluye.length) set("incluye", p.incluye.map(esc).join("<br>"));
-    $$("[data-cta]").forEach((el) => (el.href = ctaHref(`Hola, me interesa rentar: ${p.nombre}. ¿Me pasas disponibilidad y precio?`)));
+    $$("[data-cta]").forEach((el) => {
+      el.href = ctaHref(`Hola, me interesa rentar: ${p.nombre}. ¿Me pasas disponibilidad y precio?`);
+      if (N.whatsapp) { el.target = "_blank"; el.rel = "noopener"; } // abre WhatsApp en otra pestaña
+    });
 
     // Galería
     const main = $("[data-gallery-main]");
