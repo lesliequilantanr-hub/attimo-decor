@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Producto · Catálogo de renta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-product">
+  <div class="curtain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand" data-negocio="nombre">Attimo</a>
+    <nav class="nav-inline" aria-label="Principal">
+      <a href="index.html#catalogo">Catálogo</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+  </header>
+
+  <div class="menu-overlay" id="menu" hidden>
+    <button class="menu-close">× Cerrar</button>
+    <ol class="menu-list" data-menu-list></ol>
+    <p class="menu-foot" data-negocio="lema"></p>
+  </div>
+
+  <main class="product" data-product>
+    <a href="index.html#catalogo" class="back-link">← Todo el catálogo</a>
+
+    <header class="product-head">
+      <p class="eyebrow"><span data-p="index"></span> — <span data-p="categoria"></span></p>
+      <h1 class="product-title"><span class="line"><span data-p="nombre"></span></span></h1>
+      <p class="product-lede" data-p="resumen"></p>
+    </header>
+
+    <div class="product-body">
+      <div class="gallery" data-gallery>
+        <div class="gallery-main"><img data-gallery-main alt=""></div>
+        <div class="gallery-thumbs" data-gallery-thumbs></div>
+      </div>
+
+      <aside class="specs">
+        <div class="price">
+          <span class="price-label">Precio de renta</span>
+          <span class="price-value" data-p="precio"></span>
+          <span class="price-unit" data-p="unidad"></span>
+        </div>
+        <dl class="spec-list">
+          <div><dt>Medidas</dt><dd data-p="medidas"></dd></div>
+          <div><dt>Material</dt><dd data-p="material"></dd></div>
+          <div><dt>Cantidad</dt><dd data-p="cantidad"></dd></div>
+          <div><dt>Ideal para</dt><dd data-p="eventos"></dd></div>
+          <div data-incluye-row><dt>Incluye</dt><dd data-p="incluye"></dd></div>
+        </dl>
+        <p class="product-desc" data-p="descripcion"></p>
+        <a class="btn" data-cta href="#">Cotizar esta pieza <span aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+
+    <nav class="product-nav" aria-label="Otros productos">
+      <a data-prev href="#"><small>Anterior</small><span></span></a>
+      <a data-next href="#"><small>Siguiente</small><span></span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div class="footer-grid">
+      <p data-negocio="nombre"></p>
+      <p data-contacto></p>
+      <p>© <span data-year></span></p>
+    </div>
+  </footer>
+
+  <script src="js/productos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

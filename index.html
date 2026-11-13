@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attimo Decor · Renta para eventos</title>
+  <meta name="description" content="Renta de mobiliario y decoración para bodas, despedidas y cumpleaños.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-home">
+  <div class="curtain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="brand" data-negocio="nombre">Attimo</a>
+    <nav class="nav-inline" aria-label="Principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+  </header>
+
+  <div class="menu-overlay" id="menu" hidden>
+    <button class="menu-close">× Cerrar</button>
+    <ol class="menu-list" data-menu-list></ol>
+    <p class="menu-foot" data-negocio="lema"></p>
+  </div>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow reveal"><span data-negocio="ciudad"></span> · Renta para eventos</p>
+      <h1 class="hero-title">
+        <span class="line"><span>Piezas que</span></span>
+        <span class="line"><span><em>convierten</em> un lugar</span></span>
+        <span class="line"><span>en tu evento.</span></span>
+      </h1>
+      <div class="hero-foot reveal">
+        <p class="hero-lede">Arcos, tarimas, iluminación y bases para flores. Elige tus piezas y arma la decoración de tu boda, despedida o cumpleaños.</p>
+        <a href="#catalogo" class="scroll-cue">Ver catálogo <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" data-marquee></div></div>
+
+    <section class="catalog" id="catalogo">
+      <div class="catalog-bar">
+        <h2 class="section-label">Catálogo <sup data-total></sup></h2>
+        <div class="filters" role="toolbar" aria-label="Filtrar por categoría" data-filters></div>
+        <div class="view-toggle" role="group" aria-label="Vista">
+          <button class="is-active" data-view="grid" aria-pressed="true">Cuadrícula</button>
+          <button data-view="list" aria-pressed="false">Lista</button>
+        </div>
+      </div>
+
+      <ul class="works is-grid" data-works></ul>
+      <div class="hover-preview" aria-hidden="true"><img alt=""></div>
+    </section>
+
+    <section class="about" id="nosotros">
+      <p class="section-label reveal">Nosotros</p>
+      <p class="about-text reveal">Rentamos piezas de decoración que ya han vestido bodas y celebraciones reales. Nos encargamos de entregarlas, montarlas y recogerlas para que tú solo disfrutes.</p>
+      <ol class="steps">
+        <li class="reveal"><span>01</span>Elige tus piezas del catálogo.</li>
+        <li class="reveal"><span>02</span>Mándanos la fecha y el lugar.</li>
+        <li class="reveal"><span>03</span>Te enviamos la cotización y apartamos.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <p class="footer-cta reveal">¿Lista la fecha? <a data-cta href="#">Pide tu cotización <span aria-hidden="true">→</span></a></p>
+    <div class="footer-grid">
+      <p data-negocio="nombre"></p>
+      <p data-contacto></p>
+      <p><span data-total-text></span> piezas en renta · © <span data-year></span></p>
+    </div>
+  </footer>
+
+  <script src="js/productos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
