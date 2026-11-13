@@ -187,6 +187,9 @@
     set("nombre", esc(p.nombre));
     set("resumen", esc(p.resumen));
     set("descripcion", esc(p.descripcion));
+    // Nota opcional en gris bajo los datos (ej. "Arreglo floral no incluido.")
+    const nota = $('[data-p="nota"]');
+    if (nota) { nota.hidden = !p.nota; nota.textContent = p.nota || ""; }
     set("precio", fmtPrecio(p.precio));
     set("unidad", p.precio == null ? "Precio según fecha y cantidad" : esc(p.unidad));
     set("medidas", /por definir/i.test(p.medidas || "") ? pending(p.medidas) : fmtMedidas(p.medidas));

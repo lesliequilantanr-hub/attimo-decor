@@ -113,6 +113,7 @@ window.CATALOGO = {
       material: "Por definir",
       cantidad: "Por definir",
       incluye: ["Jarrón"],
+      nota: "Arreglo floral no incluido.",
       eventos: ["Bodas", "Despedidas", "XV años"],
       imagenes: ["assets/img/productos/bases-macetas/bases-macetas-01.jpg"],
     },

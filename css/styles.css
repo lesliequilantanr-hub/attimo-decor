@@ -276,6 +276,7 @@ body.is-ready .line > span { transform: none; }
 .spec-list dd { margin: 0; }
 .spec-list dd em { font-family: var(--f-sans); font-style: italic; color: var(--muted); }
 .spec-list .pending { color: var(--muted); font-style: italic; }
+.product-note { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
 .product-desc { margin: 24px 0 32px; color: #3b3834; }
 .btn {
   display: flex; justify-content: space-between; align-items: center;
