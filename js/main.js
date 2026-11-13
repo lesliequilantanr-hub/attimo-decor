@@ -105,7 +105,7 @@
           <div class="work-meta">
             <span class="work-num">${pad(i + 1)}</span>
             <h3 class="work-title">${esc(p.nombre)} <span class="cat">— ${esc(p.categoria)}</span></h3>
-            <span class="work-price">${fmtPrecio(p.precio)}</span>
+            <span class="work-price">Cotizar</span>
             <span class="work-arrow" aria-hidden="true">→</span>
           </div>
         </a>
@@ -120,7 +120,7 @@
           <div class="work-meta">
             <span class="work-num">${pad(i + 1)}</span>
             <h3 class="work-title">${esc(p.nombre)} <span class="cat">— ${esc(p.categoria)}</span></h3>
-            <span class="work-price">${fmtPrecio(p.precio)}</span>
+            <span class="work-price">Cotizar</span>
             <span class="work-arrow" aria-hidden="true">→</span>
           </div>
         </a>
