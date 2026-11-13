@@ -54,7 +54,7 @@ window.CATALOGO = {
       unidad: "por pieza",
       medidas: "Por definir",
       material: "Cristal y metal dorado",
-      cantidad: "Por definir",
+      cantidad: "Sujeta a disponibilidad",
       incluye: ["Carga completa antes del evento"],
       eventos: ["Bodas", "Cumpleaños", "Despedidas", "XV años"],
       imagenes: [
