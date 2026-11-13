@@ -125,7 +125,7 @@ window.CATALOGO = {
         "Tarima en acabado blanco para levantar la mesa de novios o la mesa principal. Hace que todos los invitados los vean y combina perfecto con el arco como fondo.",
       precio: 3000,
       unidad: "por evento",
-      medidas: "3.60 × 3.60 m",
+      medidas: "3.60 m × 3.60 m",
       material: "Por definir",
       cantidad: "1 pieza",
       incluye: ["Montaje y desmontaje"],

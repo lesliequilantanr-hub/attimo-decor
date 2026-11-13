@@ -14,6 +14,11 @@
   const linkTo = (slug) => (SPA ? `#${slug}` : `producto.html?p=${slug}`);
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+  // Medidas: números con 2 decimales ("3 m" → "3.00 m") y palabras (alto, ancho…) en itálica
+  const fmtMedidas = (txt) =>
+    esc(txt || "")
+      .replace(/(\d+(?:\.\d+)?)(?=\s*m\b)/g, (n) => Number(n).toFixed(2))
+      .replace(/\b(de alto|de ancho|de largo|de fondo|alto|ancho|largo|fondo|di[aá]metro)\b/gi, "<em>$1</em>");
   const fmtPrecio = (p) =>
     p == null ? "Cotizar" : new Intl.NumberFormat("es-MX", { style: "currency", currency: N.moneda, maximumFractionDigits: 0 }).format(p);
 
@@ -184,7 +189,7 @@
     set("descripcion", esc(p.descripcion));
     set("precio", fmtPrecio(p.precio));
     set("unidad", p.precio == null ? "Precio según fecha y cantidad" : esc(p.unidad));
-    set("medidas", pending(p.medidas));
+    set("medidas", /por definir/i.test(p.medidas || "") ? pending(p.medidas) : fmtMedidas(p.medidas));
     // material: "" (vacío) oculta el renglón en la ficha
     $("[data-material-row]").hidden = p.material === "";
     set("material", pending(p.material));

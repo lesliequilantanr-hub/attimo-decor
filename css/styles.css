@@ -274,6 +274,7 @@ body.is-ready .line > span { transform: none; }
 .spec-list > div[hidden] { display: none; }
 .spec-list dt { color: var(--muted); padding-top: 3px; }
 .spec-list dd { margin: 0; }
+.spec-list dd em { font-family: var(--f-sans); font-style: italic; color: var(--muted); }
 .spec-list .pending { color: var(--muted); font-style: italic; }
 .product-desc { margin: 24px 0 32px; color: #3b3834; }
 .btn {
