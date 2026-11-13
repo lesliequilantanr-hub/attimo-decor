@@ -60,7 +60,6 @@ window.CATALOGO = {
       imagenes: [
         "assets/img/productos/lamparas-mesa/lamparas-mesa-01.jpg",
         "assets/img/productos/lamparas-mesa/lamparas-mesa-02.jpg",
-        "assets/img/productos/lamparas-mesa/lamparas-mesa-03.jpg",
         "assets/img/productos/lamparas-mesa/lamparas-mesa-04.jpg",
       ],
     },
