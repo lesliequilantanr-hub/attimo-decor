@@ -71,8 +71,9 @@ window.CATALOGO = {
       resumen: "Mesa redonda blanca de pedestal para libro de firmas o regalos.",
       descripcion:
         "Mesa redonda con base de pedestal en blanco. Ideal para la entrada: libro de firmas, fotos de la pareja, recuerdos o la mesa de regalos. Su forma limpia deja que la decoración sea la protagonista.",
-      precio: null,
-      unidad: "por evento",
+      precio: 350,
+      unidad: "solo la mesa",
+      opciones: ["Con caja de sobres, 1 lámpara decorativa y marco de fotos: $450"],
       medidas: "Por definir",
       material: "Por definir",
       cantidad: "1 pieza",
@@ -87,8 +88,8 @@ window.CATALOGO = {
       resumen: "Juego de 3 bases blancas en distintas alturas para arreglos.",
       descripcion:
         "Set de tres pedestales blancos de diferentes alturas para levantar arreglos florales. Funcionan para el pasillo de una ceremonia civil, la entrada o para enmarcar un altar, creando niveles y profundidad.",
-      precio: null,
-      unidad: "juego de 3",
+      precio: 250,
+      unidad: "c/u",
       medidas: "Por definir",
       material: "Por definir",
       cantidad: "3 piezas",
